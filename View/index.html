@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mainpage</title>
+    <script src="./js/indexJs.js"></script>
+</head>
+<body class="font-sans bg-slate-100">
+    <header class="sticky top-0">
+        <nav class="flex justify-between items-center p-4 bg-white">
+            <div>
+                a
+                <a href=./index.html" class="flex text-black font-bold text-3xl align-middle"><span class="text-blue-800 text-3xl font-bold">PARMS</span>Clinic</a>
+            </div>
+            <div class="flex">
+                <a href="#" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">Log in</a>
+                <a href="#" type="button" class="self-center">
+                    <i class="fa fa-bars" style="font-size: 30px;"></i>
+                </a>
+            </div>
+        </nav>
+        <div class="flex bg-black py-4 justify-center text-white space-x-10 text-xl">
+            <a href="./index.html" class="text-blue-500">Home</a>
+            <a href="./OurVets.html" class="hover:text-blue-500">Our Vets</a>
+            <a href="./Services.html" class="hover:text-blue-500">Services</a>
+            <a href="./AboutUs.html" class="hover:text-blue-500">About Us</a>
+            <a href="./Contacts.html" class="hover:text-blue-500">Contacts</a>
+        </div>
+    </header>
+    <main>
+        <div class="relative bg-cover bg-no-repeat" style="background-image: url(./img/sampleBG.jpg); height: 485px;">
+            <div class="absolute bottom-0 right-0 mr-10 mb-16">
+                <a href="#" class=" bg-blue-800/80 rounded-lg p-2 px-6 mr-3 text-white text-xl">Set Appointment</a>
+                <a href="#" class="bg-white/80 rounded-lg p-2 px-6 text-xl">Our Services</a>    
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="flex justify-between mt-8 bg-white rounded-lg font-semibold text-xl">
+                <a href="#" class="hover:bg-blue-500 hover:text-white p-4 px-7" onclick="showContent('PrevCare'), event">Preventive Care</a>
+                <a href="#" class="hover:bg-blue-500 hover:text-white p-4 px-7" onclick="showContent('Diagnostics'), event">Diagnostics</a>
+                <a href="#" class="hover:bg-blue-500 hover:text-white p-4 px-7" onclick="showContent('Surgery'), event">Surgery</a>
+                <a href="#" class="hover:bg-blue-500 hover:text-white p-4 px-7" onclick="showContent('Grooming'), event">Grooming</a>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="flex justify-between w-2/3 p-7 mt-8 bg-amber-100 rounded-lg">
+                <div class="pr-9">
+                    <div id="initialContent">
+                        <h1 class="font-semibold text-2xl">Always be there for your pet with <span class="text-blue-500">PARMS</span></h1>
+                        <p class="mt-3 text-xl">The Pet Appointment and Records Management System provides the necessary tools that empower Pet Owners on handling their pet with the help of veterinarians. A next step for providing the best care for their pet family.</p>
+                        <div class="flex justify-end mt-6">
+                            <a href="#" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white">Join Us</a>
+                        </div>
+                    </div>
+                    <div id="PrevCare" class="hidden">
+                        <h1 class="font-semibold text-2xl">Preventive Care</h1>
+                        <p class="mt-3 text-xl">Lorem ipsum dolor sit amet consectetur. Tellus tortor proin quis sollicitudin in eget non sagittis vel. Amet lobortis commodo diam a amet ut rhoncus donec cum. Nunc euismod pulvinar quis mi nibh malesuada eget pulvinar. Sodales risus diam proin suspendisse ipsum diam.</p>
+                        <div class="flex justify-end mt-6">
+                            <a href="#" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div id="Diagnostics" class="hidden">
+                        <h1 class="font-semibold text-2xl">Diagnostics</h1>
+                        <p class="mt-3 text-xl">Lorem ipsum dolor sit amet consectetur. Tellus tortor proin quis sollicitudin in eget non sagittis vel. Amet lobortis commodo diam a amet ut rhoncus donec cum. Nunc euismod pulvinar quis mi nibh malesuada eget pulvinar. Sodales risus diam proin suspendisse ipsum diam.</p>
+                        <div class="flex justify-end mt-6">
+                            <a href="#" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div id="Surgery" class="hidden">
+                        <h1 class="font-semibold text-2xl">Surgery</h1>
+                        <p class="mt-3 text-xl">Lorem ipsum dolor sit amet consectetur. Tellus tortor proin quis sollicitudin in eget non sagittis vel. Amet lobortis commodo diam a amet ut rhoncus donec cum. Nunc euismod pulvinar quis mi nibh malesuada eget pulvinar. Sodales risus diam proin suspendisse ipsum diam.</p>
+                        <div class="flex justify-end mt-6">
+                            <a href="#" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div id="Grooming" class="hidden">
+                        <h1 class="font-semibold text-2xl">Grooming</h1>
+                        <p class="mt-3 text-xl">Lorem ipsum dolor sit amet consectetur. Tellus tortor proin quis sollicitudin in eget non sagittis vel. Amet lobortis commodo diam a amet ut rhoncus donec cum. Nunc euismod pulvinar quis mi nibh malesuada eget pulvinar. Sodales risus diam proin suspendisse ipsum diam.</p>
+                        <div class="flex justify-end mt-6">
+                            <a href="#" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="flex">
+                    <img src="./img/catso.jpg" alt="Cat on back of veterinarian" width="1300px" class="rounded-md">
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="mt-20">
+        <div class="bg-black/75 text-white p-6">
+            <div class="flex justify-between">
+                <h2>All Rights Reserved. 2024.</h2>
+                <h2>Website Made By ArkiTech</h2>
+                <h2>Contact Us</h2>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
