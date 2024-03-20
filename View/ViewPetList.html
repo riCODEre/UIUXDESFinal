@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mainpage</title>
+    <script src="/js/indexJs.js"></script>
+</head>
+<body class="font-sans bg-slate-100">
+    <header class="sticky top-0">
+        <nav class="flex justify-between items-center p-4 bg-white ">
+            <div>
+                <a href="./index.html" class="flex text-black font-bold text-3xl align-middle"><span class="text-blue-800 text-3xl font-bold">PARMS</span>Clinic</a>
+            </div>
+
+            <div class="flex">
+                <a href="#" onclick="showContent('adminView'), event" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">Admin View</a>
+                <a href="./ViewPetList.html" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">PO View</a>
+                <a href="#" type="button" class="self-center">
+                    <i class="fa fa-bars" style="font-size: 30px;"></i>
+                </a>
+            </div>
+        </nav>
+        <div class="flex bg-black py-4 justify-center text-white space-x-10 text-xl">
+            <a href="index.html" class="hover:text-blue-500">Home</a>
+            <a href="OurVets.html" class="hover:text-blue-500">Our Vets</a>
+            <a href="Services.html" class="hover:text-blue-500">Services</a>
+            <a href="AboutUs.html" class="hover:text-blue-500">About Us</a>
+            <a href="Contacts.html" class="hover:text-blue-500">Contacts</a>
+            
+        </div>
+    </header>
+    <main> 
+        <div id="adminView" class="hidden">
+            <div class="flex justify-center mt-10">
+                <h1 class="font-bold text-xl">Pet Owner Details</h1>
+            </div>
+            <div class="flex justify-center items-center p-5 space-x-8">
+                <div class="flex flex-col items-center">
+                    <img src="/img/rando.jpg" alt="Male guy" class="rounded-full w-[200px]">
+                    <h2 class="font-semibold text-xl mt-6">Juan Dela Cruz</h2>
+                </div>
+                <div class="bg-white rounded-lg p-5 block self-center space-y-5">
+                    <p>Age: <span class="font-bold">18</span></p>
+                    <p>Gender: <span class="font-bold">Male</span></p>
+                    <p>Home Address: <span class="font-bold">Somewhere In the Rainbow</span></p>
+                    <p>Work Address: <span class="font-bold">Tokyo, Japan</span></p>
+                    <p>Working Hours: <span class="font-bold">6pm-9am</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <p class="font-bold text-2xl mt-7">Your Pets</p>
+        </div>
+        
+        <div class="grid justify-center space-x-10 space-y-8">
+            <div class="flex justify-end mt-10 space-x-4 col-span-3">
+                <a href="#" class="px-6 rounded-lg p-2 bg-blue-800 text-white ">
+                    Add Pet
+                </a>
+                <a href="#" class="px-6 rounded-lg p-2 bg-blue-800 text-white ">
+                    View Appointments
+                </a>
+                <form action="" class="flex">
+                    <label for="search" hidden></label>
+                    <input class="flex hover:border-blue-500 bg-gray-50 ml-3 p-1 my-1 border border-black rounded-md w-80" type="text" name="search" id="search" placeholder="Search Pet">
+                    <button type="submit" class="ml-3">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                
+                
+            </div>
+            <div class="">
+                <div>
+                    <img src="/img/catso.jpg" width="400px" alt="" class="rounded-t-lg"> 
+                </div>
+                <div class="flex flex-col items-center bg-white p-[15px] w-[400px]" >
+                    <h2 class="font-bold text-2xl">Antonov, The Cat</h2>
+                    <a href="#" class="rounded-lg bg-blue-800 mt-3 p-2 px-5 text-white self-center">View Pet Infromation</a>
+                </div>
+            </div>
+            <div class="">
+                <div>
+                    <img src="/img/catso.jpg" width="400px" alt="" class="rounded-t-lg"> 
+                </div>
+                <div class="flex flex-col items-center bg-white p-[15px] w-[400px]" >
+                    <h2 class="font-bold text-2xl">Antonov, The Cat</h2>
+                    <a href="#" class="rounded-lg bg-blue-800 mt-3 p-2 px-5 text-white self-center">View Pet Infromation</a>
+                </div>
+                
+            </div>
+            <div class="">
+                <div>
+                    <img src="/img/catso.jpg" width="400px" alt="" class="rounded-t-lg"> 
+                </div>
+                <div class="flex flex-col items-center bg-white p-[15px] w-[400px]" >
+                    <h2 class="font-bold text-2xl">Antonov, The Cat</h2>
+                    <a href="#" class="rounded-lg bg-blue-800 mt-3 p-2 px-5 text-white self-center">View Pet Infromation</a>
+                </div>
+                
+            </div>
+            <div class="">
+                <div>
+                    <img src="/img/catso.jpg" width="400px" alt="" class="rounded-t-lg"> 
+                </div>
+                <div class="flex flex-col items-center bg-white p-[15px] w-[400px]" >
+                    <h2 class="font-bold text-2xl">Antonov, The Cat</h2>
+                    <a href="#" class="rounded-lg bg-blue-800 mt-3 p-2 px-5 text-white self-center">View Pet Infromation</a>
+                </div>
+                
+            </div>
+            <div class="">
+                <div>
+                    <img src="/img/catso.jpg" width="400px" alt="" class="rounded-t-lg"> 
+                </div>
+                <div class="flex flex-col items-center bg-white p-[15px] w-[400px]" >
+                    <h2 class="font-bold text-2xl">Antonov, The Cat</h2>
+                    <a href="#" class="rounded-lg bg-blue-800 mt-3 p-2 px-5 text-white self-center">View Pet Infromation</a>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <footer class="mt-20">
+        <div class="bg-black/75 text-white p-6">
+            <div class="flex justify-between">
+                <h2>All Rights Reserved. 2024.</h2>
+                <h2>Website Made By ArkiTech</h2>
+                <h2>Contact Us</h2>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
