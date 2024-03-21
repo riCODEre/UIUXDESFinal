@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mainpage</title>
+    <script src="/js/indexJs.js"></script>
+</head>
+<body class="font-sans bg-slate-100">
+    <header class="sticky top-0">
+        <nav class="flex justify-between items-center p-4 bg-white ">
+            <div>
+                <a href="./index.html" class="flex text-black font-bold text-3xl align-middle"><span class="text-blue-800 text-3xl font-bold">PARMS</span>Clinic</a>
+            </div>
+            
+            <div class="flex">
+                <a href="#" onclick="showContent('adminView'), event" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">Admin View</a>
+                <a href="./ViewAppoint.html" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">PO View</a>
+                <a href="#" type="button" class="self-center">
+                    <i class="fa fa-bars" style="font-size: 30px;"></i>
+                </a>
+            </div>
+        </nav>
+        <div class="flex bg-black py-4 justify-center text-white space-x-10 text-xl">
+            <a href="index.html" class="hover:text-blue-500">Home</a>
+            <a href="OurVets.html" class="hover:text-blue-500">Our Vets</a>
+            <a href="Services.html" class="hover:text-blue-500">Services</a>
+            <a href="AboutUs.html" class="hover:text-blue-500">About Us</a>
+            <a href="Contacts.html" class="hover:text-blue-500">Contacts</a>
+            
+        </div>
+    </header>
+    <main> 
+        <div class="flex flex-col items-center mt-8">
+            <div class="flex justify-between w-[850px]">
+                <div class="flex place-self-center">
+                    <p>Sort by:</p>
+                    <select class="bg-slate-100 font-bold" name="Sort" id="Sort">
+                        <option value="None">None</option>
+                        <option value="Date">Date - Newest</option>
+                        <option value="Date">Date - Oldest</option>
+                        <option value="AZ">A-Z</option>
+                        <option value="ZA">Z-A</option>
+                    </select>
+                </div>
+                <input class="flex hover:border-blue-500 bg-gray-50 p-1 my-1 border border-black rounded-md w-80" type="text" name="SearchB" id="SearchB" placeholder="Search Bar">
+            </div>
+            <div id="initialContent">
+                <div class="flex justify-center">
+                    <div class="flex justify-between bg-white rounded-lg my-6 p-6 w-[850px]"">
+                        <div class="flex">
+                            <div class="mr-6">
+                                <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
+                            </div>
+                            <div class="place-self-center ">
+                                <h2 class="font-bold mb-2 text-3xl">Juan Dela Cruz</h2>
+                                <p class="text-lg">7pm-10pm</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col place-self-center space-y-3">
+                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
+                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="flex justify-between bg-white rounded-lg p-6 w-[850px]"">
+                        <div class="flex">
+                            <div class="mr-6">
+                                <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
+                            </div>
+                            <div class="place-self-center ">
+                                <h2 class="font-bold mb-2 text-3xl">Juan Dela Cruz</h2>
+                                <p class="text-lg">7pm-10pm</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col place-self-center space-y-3">
+                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
+                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="adminView" class="hidden" >
+                <div class="flex justify-center">
+                    <div class="flex justify-between bg-white rounded-lg my-6 p-6 w-[850px]"">
+                        <div class="flex">
+                            <div class="mr-6">
+                                <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
+                            </div>
+                            <div class="place-self-center ">
+                                <h2 class="font-bold mb-2 text-3xl">Juan Dela Cruz</h2>
+                                <p class="text-lg">7pm-10pm</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col place-self-center space-y-3">
+                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
+                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
+                            <a href="#" class="border border-blue-800 p-2 rounded-lg">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="flex justify-between bg-white rounded-lg p-6 w-[850px]"">
+                        <div class="flex">
+                            <div class="mr-6">
+                                <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
+                            </div>
+                            <div class="place-self-center ">
+                                <h2 class="font-bold mb-2 text-3xl">Juan Dela Cruz</h2>
+                                <p class="text-lg">7pm-10pm</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col place-self-center space-y-3">
+                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
+                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
+                            <a href="#" class="border border-blue-800 p-2 rounded-lg">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-20">
+        <div class="bg-black/75 text-white p-6">
+            <div class="flex justify-between">
+                <h2>All Rights Reserved. 2024.</h2>
+                <h2>Website Made By ArkiTech</h2>
+                <h2>Contact Us</h2>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
