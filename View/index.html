@@ -14,14 +14,27 @@
             <div>
                 <a href="./index.html" class="flex text-black font-bold text-3xl align-middle"><span class="text-blue-800 text-3xl font-bold">PARMS</span>Clinic</a>
             </div>
-            <div class="flex">
-                <a href="./Login.html" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">Log in</a>
-                <a href="#" type="button" class="self-center">
-                    <i class="fa fa-bars" style="font-size: 30px;"></i>
-                </a>
+            <div class="block sm:flex">
+                <a href="./Login.html" class="hidden sm:flex rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">Log in</a>
+                <div class="relative inline-block">
+                    <button class="sm:hidden text-center p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold rounded-lg" onclick="menuContent('Menu'), event">
+                        <i class="fa fa-bars text-xl font-light px-2"></i>
+                    </button>
+                    <div id="Menu" class="hidden sm:hidden text-center right-0 w-[200px] bg-white absolute mt-2 rounded-lg shadow-md">
+                        <ul class="py-4 space-y-3">
+                            <li><a href="OurVets.html">Our Vets</a></li>
+                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="AboutUs.html">About Us</a></li>
+                            <li><a href="Contacts.html">Contact</a></li>
+                            <li class="mt-10">
+                                <a href="./Login.html" class="rounded-lg bg-blue-800 p-2 px-5  text-white self-center">Log in</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
-        <div class="flex bg-black py-4 justify-center text-white space-x-10 text-xl">
+        <div class="hidden sm:flex bg-black py-4 justify-center text-white space-x-10 text-xl">
             <a href="./index.html" class="text-blue-500">Home</a>
             <a href="./OurVets.html" class="hover:text-blue-500">Our Vets</a>
             <a href="./Services.html" class="hover:text-blue-500">Services</a>
@@ -31,10 +44,15 @@
 
     </header>
     <main>
-        <div class="flex justify-end items-end bg-cover bg-center bg-no-repeat" style="background-image: url(/img/sampleBG.jpg); height: 485px;">
-            <div class="mb-10 mr-6">
-                <a href="./Login.html" class=" bg-blue-800/80 rounded-lg p-2 px-6 mr-3 text-white text-xl">Set Appointment</a>
-                <a href="./Services.html" class="bg-white/80 rounded-lg p-2 px-6 text-xl">Our Services</a>    
+        <div class="p-7 bg-cover bg-center bg-no-repeat" style="background-image: url(/img/sampleBG.jpg); height: 485px;">
+            <div class="block mb-6 sm:flex sm:justify-end mt-[350px]">
+                <div>
+                    <a href="./Login.html" class="bg-blue-800/80 rounded-lg p-2 px-6 mr-3 text-white text-xl">Set Appointment</a>
+                </div>
+                <div class="mt-8 sm:mt-0">
+                    <a href="./Services.html" class="bg-white/80 rounded-lg p-2 px-6 text-xl">Our Services</a>
+                </div>
+                  
             </div>
         </div>
         <div class="flex justify-center">
@@ -55,28 +73,28 @@
                             <a href="#" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white">Join Us</a>
                         </div>
                     </div>
-                    <div id="PrevCare" class="hidden">
+                    <div id="PrevCare" class="hidden bar">
                         <h1 class="font-semibold text-2xl">Preventive Care</h1>
                         <p class="mt-3 text-xl">Lorem ipsum dolor sit amet consectetur. Tellus tortor proin quis sollicitudin in eget non sagittis vel. Amet lobortis commodo diam a amet ut rhoncus donec cum. Nunc euismod pulvinar quis mi nibh malesuada eget pulvinar. Sodales risus diam proin suspendisse ipsum diam.</p>
                         <div class="flex justify-end mt-6">
                             <a href="#" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white">Get In Touch</a>
                         </div>
                     </div>
-                    <div id="Diagnostics" class="hidden">
+                    <div id="Diagnostics" class="hidden bar">
                         <h1 class="font-semibold text-2xl">Diagnostics</h1>
                         <p class="mt-3 text-xl">Lorem ipsum dolor sit amet consectetur. Tellus tortor proin quis sollicitudin in eget non sagittis vel. Amet lobortis commodo diam a amet ut rhoncus donec cum. Nunc euismod pulvinar quis mi nibh malesuada eget pulvinar. Sodales risus diam proin suspendisse ipsum diam.</p>
                         <div class="flex justify-end mt-6">
                             <a href="#" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white">Get In Touch</a>
                         </div>
                     </div>
-                    <div id="Surgery" class="hidden">
+                    <div id="Surgery" class="hidden bar">
                         <h1 class="font-semibold text-2xl">Surgery</h1>
                         <p class="mt-3 text-xl">Lorem ipsum dolor sit amet consectetur. Tellus tortor proin quis sollicitudin in eget non sagittis vel. Amet lobortis commodo diam a amet ut rhoncus donec cum. Nunc euismod pulvinar quis mi nibh malesuada eget pulvinar. Sodales risus diam proin suspendisse ipsum diam.</p>
                         <div class="flex justify-end mt-6">
                             <a href="#" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white">Get In Touch</a>
                         </div>
                     </div>
-                    <div id="Grooming" class="hidden">
+                    <div id="Grooming" class="hidden bar">
                         <h1 class="font-semibold text-2xl">Grooming</h1>
                         <p class="mt-3 text-xl">Lorem ipsum dolor sit amet consectetur. Tellus tortor proin quis sollicitudin in eget non sagittis vel. Amet lobortis commodo diam a amet ut rhoncus donec cum. Nunc euismod pulvinar quis mi nibh malesuada eget pulvinar. Sodales risus diam proin suspendisse ipsum diam.</p>
                         <div class="flex justify-end mt-6">
@@ -86,7 +104,7 @@
                     <div></div>
                 </div>
                 <div class="flex">
-                    <img src="/img/catso.jpg" alt="Cat on back of veterinarian" width="1300px" class="rounded-md">
+                    <img src="/img/catso.jpg" alt="Cat on back of veterinarian" width="1300px" class="sm:block rounded-md">
                 </div>
             </div>
         </div>

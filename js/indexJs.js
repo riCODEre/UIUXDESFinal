@@ -11,9 +11,9 @@ function showContent(contentId) {
     }
 
     // Hide all content sections
-    var contents = document.querySelectorAll('.hidden');
+    var contents = document.querySelectorAll('.bar');
     contents.forEach(function(content) {
-    content.style.display = 'none';
+        content.style.display = 'none';
     });
 
     // Show the selected content
@@ -21,4 +21,22 @@ function showContent(contentId) {
     if (selectedContent) {
     selectedContent.style.display = 'block';
     }
+}
+var click = 0;
+function menuContent(contentId) {
+    if (click == 0){
+        var selectedContent = document.getElementById(contentId);
+        if (selectedContent) {
+            selectedContent.style.display = 'block';
+        };
+        click += 1;
+    } 
+    else {
+        var contents = document.getElementById(contentId);
+        if (contents) {
+            contents.style.display = 'none';
+        }
+        click = 0;
+    }
+
 }
