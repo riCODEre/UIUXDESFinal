@@ -10,31 +10,35 @@
 </head>
 <body class="font-sans bg-slate-100">
     <header class="sticky top-0">
-        <nav class="flex justify-between items-center p-4 bg-white ">
+        <nav class="flex justify-between items-center p-4 bg-white">
             <div>
                 <a href="./index.html" class="flex text-black font-bold text-3xl align-middle"><span class="text-blue-800 text-3xl font-bold">PARMS</span>Clinic</a>
             </div>
-            
-            <div class="flex">
-                <a href="#" onclick="showContent('adminView'), event" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">Admin View</a>
-                <a href="./ViewAppoint.html" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">PO View</a>
-                <a href="#" type="button" class="self-center">
-                    <i class="fa fa-bars" style="font-size: 30px;"></i>
-                </a>
-            </div>8
+            <div class="block sm:flex">
+                <div class="flex">
+                    <a href="#" onclick="showContent('adminView'), event" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">Admin View</a>
+                    <a href="./ViewPetList.html" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">PO View</a>
+                </div>
+                <div class="relative inline-block">
+                    <button class="text-center p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold rounded-lg" onclick="menuContent('Menu'), event">
+                        <i class="fa fa-bars text-xl font-light px-2"></i>
+                    </button>
+                    <div id="Menu" class="hidden sm:hidden text-center right-0 w-[200px] bg-white absolute mt-2 rounded-lg shadow-md">
+                        <ul class="py-4">
+                            <li class="hover:bg-blue-100 p-2"><a href="./ViewPetList.html">Pets</a></li>
+                            <li class="hover:bg-blue-100 p-2"><a href="./ViewAppoint.html">Appointments</a></li>
+                            <li class="mt-3 hover:bg-blue-100 p-2">
+                                <a href="./index.html" class="rounded-lg bg-blue-800 hover:bg-blue-900 p-2 px-5  text-white self-center">Sign out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <div class="flex bg-black py-4 justify-center text-white space-x-10 text-xl">
-            <a href="index.html" class="hover:text-blue-500">Home</a>
-            <a href="OurVets.html" class="hover:text-blue-500">Our Vets</a>
-            <a href="Services.html" class="hover:text-blue-500">Services</a>
-            <a href="AboutUs.html" class="hover:text-blue-500">About Us</a>
-            <a href="Contacts.html" class="hover:text-blue-500">Contacts</a>
-            
-        </div>
     </header>
     <main> 
         <div class="flex flex-col items-center mt-8">
-            <div class="flex justify-between w-[850px]">
+            <div class="flex justify-between place-items-center w-1/2 space-x-5">
                 <div class="flex place-self-center">
                     <p>Sort by:</p>
                     <select class="bg-slate-100 font-bold" name="Sort" id="Sort">
@@ -51,81 +55,69 @@
                 </div>
                 
             </div>
-            <div id="initialContent">
-                <div class="flex justify-center">
-                    <div class="flex justify-between bg-white rounded-lg my-6 p-6 w-[850px]">
-                        <div class="flex">
-                            <div class="mr-6">
-                                <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
-                            </div>
-                            <div class="place-self-center ">
-                                <h2 class="font-bold mb-2 text-3xl">Juan Dela Cruz</h2>
-                                <p class="text-lg">7pm-10pm</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col place-self-center text-center space-y-3">
-                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
-                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
-                        </div>
+            <div id="initialContent" class="block mx-auto w-1/2">
+                <div class="flex justify-center bg-white rounded-lg my-6 p-6">
+                    <div class="mr-6">
+                        <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
+                    </div>
+                    <div class="place-self-center ">
+                        <h2 class="font-bold mb-2 text-3xl mr-10">Juan Dela Cruz</h2>
+                        <p class="text-lg">7pm-10pm</p>
+                    </div>
+                    <div class="flex flex-col place-self-center text-center space-y-3">
+                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
+                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
                     </div>
                 </div>
-                <div class="flex justify-center">
-                    <div class="flex justify-between bg-white rounded-lg p-6 w-[850px]"">
-                        <div class="flex">
-                            <div class="mr-6">
-                                <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
-                            </div>
-                            <div class="place-self-center ">
-                                <h2 class="font-bold mb-2 text-3xl">Juan Dela Cruz</h2>
-                                <p class="text-lg">7pm-10pm</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col place-self-center space-y-3 text-center">
-                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
-                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
-                        </div>
+                <div class="flex justify-center bg-white rounded-lg my-6 p-6">
+                    <div class="mr-6">
+                        <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
+                    </div>
+                    <div class="place-self-center ">
+                        <h2 class="font-bold mb-2 text-3xl mr-10">Juan Dela Cruz</h2>
+                        <p class="text-lg">7pm-10pm</p>
+                    </div>
+                    <div class="flex flex-col place-self-center text-center space-y-3">
+                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
+                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="adminView" class="block mx-auto w-1/2">
+                <div class="flex justify-center bg-white rounded-lg my-6 p-6">
+                    <div class="mr-6">
+                        <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
+                    </div>
+                    <div class="place-self-center ">
+                        <h2 class="font-bold mb-2 text-3xl mr-10">Juan Dela Cruz</h2>
+                        <p class="text-lg">7pm-10pm</p>
+                    </div>
+                    <div class="flex flex-col place-self-center text-center space-y-3">
+                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
+                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
+                        <a href="#" class="border border-blue-800 p-2 rounded-lg">Cancel</a>
+                    </div>
+                </div>
+                <div class="flex justify-center bg-white rounded-lg my-6 p-6">
+                    <div class="mr-6">
+                        <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
+                    </div>
+                    <div class="place-self-center ">
+                        <h2 class="font-bold mb-2 text-3xl mr-10">Juan Dela Cruz</h2>
+                        <p class="text-lg">7pm-10pm</p>
+                    </div>
+                    <div class="flex flex-col place-self-center text-center space-y-3">
+                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
+                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
+                        <a href="#" class="border border-blue-800 p-2 rounded-lg">Cancel</a>
                     </div>
                 </div>
             </div>
-            <div id="adminView" class="hidden" >
-                <div class="flex justify-center">
-                    <div class="flex justify-between bg-white rounded-lg my-6 p-6 w-[850px]"">
-                        <div class="flex">
-                            <div class="mr-6">
-                                <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
-                            </div>
-                            <div class="place-self-center ">
-                                <h2 class="font-bold mb-2 text-3xl">Juan Dela Cruz</h2>
-                                <p class="text-lg">7pm-10pm</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col place-self-center space-y-3 text-center">
-                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
-                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
-                            <a href="#" class="border border-blue-800 p-2 rounded-lg">Cancel</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center">
-                    <div class="flex justify-between bg-white rounded-lg p-6 w-[850px]"">
-                        <div class="flex">
-                            <div class="mr-6">
-                                <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
-                            </div>
-                            <div class="place-self-center ">
-                                <h2 class="font-bold mb-2 text-3xl">Juan Dela Cruz</h2>
-                                <p class="text-lg">7pm-10pm</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col place-self-center space-y-3 text-center">
-                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
-                            <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
-                            <a href="#" class="border border-blue-800 p-2 rounded-lg">Cancel</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+            
+
     </main>
     <footer class="mt-20">
         <div class="bg-black/75 text-white p-6">
