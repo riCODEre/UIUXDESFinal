@@ -40,3 +40,17 @@ function menuContent(contentId) {
     }
 
 }
+
+function PHRContent() {
+    // Hide all content sections
+    var contents = document.querySelectorAll('.adminView');
+    contents.forEach(function(content) {
+        content.style.display = 'none';
+    });
+
+    // Show the selected content
+    var adminViews = document.querySelectorAll('.adminView');
+    adminViews.forEach(function(adminView) {
+        adminView.style.display = 'block'; // or any other manipulation
+    });
+}
