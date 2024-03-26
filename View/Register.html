@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mainpage</title>
+    <script src="/js/indexJs.js"></script>
+</head>
+<body class="font-sans bg-slate-100">
+    <header class="sticky top-0">
+        <nav class="flex justify-between items-center p-4 bg-white">
+            <div>
+                <a href="./index.html" class="flex text-black font-bold text-3xl align-middle"><span class="text-blue-800 text-3xl font-bold">PARMS</span>Clinic</a>
+            </div>
+            <div class="block sm:flex">
+                <div class="relative inline-block">
+                    <button class="text-center p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold rounded-lg" onclick="menuContent('Menu'), event">
+                        <i class="fa fa-bars text-xl font-light px-2"></i>
+                    </button>
+                    <div id="Menu" class="hidden sm:hidden text-center right-0 w-[200px] bg-white absolute mt-2 rounded-lg shadow-md">
+                        <ul class="py-4">
+                            <li class="hover:bg-blue-100 p-2"><a href="OurVets.html">Our Vets</a></li>
+                            <li class="hover:bg-blue-100 p-2"><a href="Services.html">Services</a></li>
+                            <li class="hover:bg-blue-100 p-2"><a href="AboutUs.html">About Us</a></li>
+                            <li class="hover:bg-blue-100 p-2"><a href="Contacts.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main> 
+        <div>
+            <div class="flex justify-center items-center h-screen"> 
+                <div id="initialContent" class="mt-20">
+                    <div class="bg-white rounded-lg p-6 w-[450px]"> 
+                        <form action="#" method="POST">
+                            <div class="text-left">
+                                <div style="margin-bottom: 20px;">
+                                    <h1 class="text-3xl font-semibold text-center">Create an Account</h1>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="firstName">First Name<span class="text-red-600"> *</span></label><br>
+                                    <input class="flex flex-grow hover:border-blue-500 bg-gray-50 p-2 my-1 border border-black rounded-md w-full" type="text" id="firstName" name="firstName" placeholder="Juan" required>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="lastName">Last Name<span class="text-red-600"> *</span></label><br>
+                                    <input class="flex flex-grow hover:border-blue-500 bg-gray-50 p-2 my-1 border border-black rounded-md w-full" type="text" id="lastName" name="lastName" placeholder="Dela Cruz" required>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="email">Email Address<span class="text-red-600"> *</span></label><br>
+                                    <input class="flex flex-grow hover:border-blue-500 bg-gray-50 p-2 my-1 border border-black rounded-md w-full" type="email" id="email" name="email" placeholder="juan.delacruz@gmail.com" required>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="contactNumber">Contact No.<span class="text-red-600"> *</span></label><br>
+                                    <input class="flex flex-grow hover:border-blue-500 bg-gray-50 p-2 my-1 border border-black rounded-md w-full" type="tel" id="contactNumber" name="contactNumber" placeholder="01234 456 7890" required>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="password">Password<span class="text-red-600"> *</span></label><br>
+                                    <div style="position: relative;">
+                                        <input class="flex flex-grow hover:border-blue-500 bg-gray-50 p-2 my-1 border border-black rounded-md w-full" type="password" id="password" name="password" placeholder="*******" required>
+                                        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;" onclick="togglePasswordVisibility('password', 'passwordVisibilityIcon')">
+                                            <i id="passwordVisibilityIcon" class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label for="confirmPassword">Confirm Password<span class="text-red-600"> *</span></label><br>
+                                    <div style="position: relative;">
+                                        <input class="flex flex-grow hover:border-blue-500 bg-gray-50 p-2 my-1 border border-black rounded-md w-full" type="password" id="confirmPassword" name="confirmPassword" placeholder="*******" required>
+                                        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;" onclick="togglePasswordVisibility('confirmPassword', 'confirmPasswordVisibilityIcon')">
+                                            <i id="confirmPasswordVisibilityIcon" class="fas fa-eye"></i>
+                                        </span>
+                                        <span id="passwordMatchMessage" style="color: red;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-end">
+                                    <a href="#" onclick="showContent('ChooseView'), event" class="hover:text-blue-500 hover:bg-white hover:border-black hover:border text-white text-xl border border-blue-800 bg-blue-800 rounded-md p-1 px-5 mr-2"> 
+                                        Back
+                                    </a>
+                                    <a href="#" onclick="showContent('ChooseView'), event" class="hover:text-blue-500 hover:bg-white hover:border-black hover:border text-white text-xl border border-blue-800 bg-blue-800 rounded-md p-1 px-5 ml-2"> 
+                                        Register
+                                    </a>
+                                </div>
+
+                                <script>
+                                    function togglePasswordVisibility(inputId, iconId) {
+                                        var passwordInput = document.getElementById(inputId);
+                                        var iconElement = document.getElementById(iconId);
+                                        if (passwordInput.type === "password") {
+                                            passwordInput.type = "text";
+                                            iconElement.classList.remove('fa-eye');
+                                            iconElement.classList.add('fa-eye-slash');
+                                        } else {
+                                            passwordInput.type = "password";
+                                            iconElement.classList.remove('fa-eye-slash');
+                                            iconElement.classList.add('fa-eye');
+                                        }
+                                    }
+                                </script>
+                                
+                            </div>   
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div id="ChooseView" class="hidden">
+                    <div class="bg-white rounded-lg m-20 p-6 w-[450px]">
+                        <div class="flex justify-center">
+                            <h1 class="font-semibold text-xl">Choose View</h1>
+                        </div>
+                        <div class="flex justify-center mt-4 space-x-7">
+                            <a href="./ViewPetList.html" class="text-white bg-blue-800 rounded-xl p-2 px-4">Pet Owner View</a>
+                            <a href="./ViewPetOwner.html" class="text-white bg-blue-800 rounded-xl p-2 px-4">Employee View</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer class="mt-20">
+        <div class="bg-black/75 text-white p-6">
+            <div class="flex justify-between">
+                <h2>All Rights Reserved. 2024.</h2>
+                <h2>Website Made By ArkiTech</h2>
+                <h2>Contact Us</h2>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
