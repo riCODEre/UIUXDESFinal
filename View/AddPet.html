@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Mainpage</title>
+    <script src="/js/indexJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    
+  </head>
+  <body class="font-sans bg-slate-100">
+    <header class="sticky top-0">
+      <nav class="flex justify-between items-center p-4 bg-white">
+        <div>
+          <a
+            href="./index.html"
+            class="flex text-black font-bold text-3xl align-middle"
+            ><span class="text-blue-800 text-3xl font-bold">PARMS</span
+            >Clinic</a
+          >
+        </div>
+        <div class="flex">
+          <a href="#" type="button" class="self-center">
+            <i class="fa fa-bars" style="font-size: 30px"></i>
+          </a>
+        </div>
+      </nav>
+      <div
+        class="flex bg-black py-4 justify-center text-white space-x-10 text-xl"
+      >
+        <a href="index.html" class="hover:text-blue-500">Home</a>
+        <a href="OurVets.html" class="hover:text-blue-500">Our Vets</a>
+        <a href="Services.html" class="hover:text-blue-500">Services</a>
+        <a href="AboutUs.html" class="hover:text-blue-500">About Us</a>
+        <a href="Contacts.html" class="hover:text-blue-500">Contacts</a>
+      </div>
+    </header>
+    <main>
+      <div>
+        <div class="flex justify-center">
+          <img
+            src="/img/HuskyDog.jpg"
+            alt="A picture of staring husky"
+            class="rounded-full w-[200px] h-[200px] p-2 px-4 m-5"
+          />
+        </div>
+        <div class="flex justify-center ml-7">
+          <div>
+            
+            
+            <div class="inline-flex">
+              <h2 class="text-1xl font-semibold ml-3 py-1">Name of Pet</h2>
+              <h2  class="text-1xl font-semibold ml-40 py-1">Type of Animal</h2>
+            </div>
+            <div>
+              <div class="inline-flex">
+                <input
+                  type="text"
+                  placeholder="Enter pet's name"
+                  class="text-box p-2 px-1 py-1 ml-3 rounded-lg w-full h-full"
+                />
+                <div class="ml-10 relative form-select block w-full mt-1">
+                  <select
+                    id="type"
+                    type="text"
+                    class="text-box p-2 px-1 py-1 ml-3 rounded-lg w-60 h-full"
+                    required
+                  >
+                  <option value="" disabled selected class="text-gray-400">Select an option</option>
+                    <option>Cat</option>
+                    <option>Dog</option>
+                    <option>Bird</option>
+                    <option>Fish</option>
+                    <option>Snake</option>
+                    <option>Hamster</option>
+                    <option>Pig</option>
+                    <option>Chicken</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center ml-7 py-3">
+          <div>
+            <div class="inline-flex">
+              <h2 class="text-1xl font-semibold ml-3 py-1">Birthdate</h2>
+              <h2 class="text-1xl font-semibold ml-44 py-1">Sex</h2>
+            </div>
+            <div>
+              <div class="inline-flex">
+                <input
+                  id = "birthdate"
+                  type="text"
+                  placeholder="mm/dd/yy"
+                  class="text-box p-2 px-1 py-1 ml-3 rounded-lg w-full h-full"
+                />
+                <div class="ml-10 relative form-select block w-full mt-1" aria-placeholder="Select an option">
+                  <select
+                    id="sex"
+                    type="text"
+                    class="text-box p-2 px-1 py-1 ml-3 rounded-lg w-60 h-full"
+                    required
+                  >
+                    <option class="text-gray-400" value="" disabled selected>Select an option</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+                </div>               
+              </div>
+            </div>
+         </div>
+      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-center py-8">
+            <button class="bg-blue-800 text-white p-2 rounded-lg w-60 h-full">
+              Add Pet
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mt-20">
+      <div class="bg-black/75 text-white p-6">
+        <div class="flex justify-between">
+          <h2>All Rights Reserved. 2024.</h2>
+          <h2>Website Made By ArkiTech</h2>
+          <h2>Contact Us</h2>
+        </div>
+      </div>
+    </footer>
+    <script>
+        flatpickr('#birthdate', {
+          dateFormat: 'm/d/Y', 
+          maxDate: 'today' 
+        });
+      </script>      
+  </body>
+</html>
