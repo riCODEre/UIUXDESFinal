@@ -41,17 +41,22 @@
                             <div>
                                 <h1 class="text-3xl font-semibold text-center">Login</h1>
                                 <p class="text-center mt-2">
-                                    Are you a new user? <a href="#" class="underline hover:text-blue-500">Sign up</a>
+                                    Are you a new user? <a href="./Register.html" class="underline hover:text-blue-500">Sign up</a>
                                 </p>
                             </div>
                             <div class="mt-4">
                                 <label class="px-3" for="email">Email<span class="text-red-600">*</span></label>
                                 <input class="flex flex-grow hover:border-blue-500
-                                    bg-gray-50 ml-3 p-2 my-1 border border-black rounded-md w-80" type="email" name="email" id="email" placeholder="juan.delacruz@gmail.com">
+                                    bg-gray-50 ml-3 p-2 my-1 border border-black rounded-md w-[300px]" type="email" name="email" id="email" placeholder="juan.delacruz@gmail.com">
                             </div>
                             <div class="mt-4">
-                                <label class="px-3" for="password">Password<span class="text-red-600">*</span></label>
-                                <input class="flex flex-grow hover:border-blue-500 bg-gray-50 ml-3 p-2 my-1 border border-black rounded-md w-80" type="password" name="password" id="password" placeholder="*******">
+                                <label for="password" class="px-3">Password<span class="text-red-600"> *</span></label>
+                                <div class="relative px-3">
+                                    <input class=" hover:border-blue-500 bg-gray-50 p-2 border border-black rounded-md w-[300px]" type="password" id="password" name="password" placeholder="*******" required>
+                                    <span class="absolute right-[10px] top-0.5 translate-y-2 pr-4 cursor-pointer" onclick="togglePasswordVisibility('password', 'passwordVisibilityIcon')">
+                                        <i id="passwordVisibilityIcon" class="fa fa-eye"></i>
+                                    </span>
+                                </div>
                             </div>
                             <div class="flex justify-center">
                                 <a href="#" onclick="showContent('ChooseView'), event" class="hover:text-blue-500 hover:bg-white hover:border-black hover:border text-white text-xl border border-blue-800 bg-blue-800 rounded-md p-1 px-5 m-5">
@@ -102,6 +107,20 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        function togglePasswordVisibility(inputId, iconId) {
+            var passwordInput = document.getElementById(inputId);
+            var iconElement = document.getElementById(iconId);
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                iconElement.classList.remove('fa-eye');
+                iconElement.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = "password";
+                iconElement.classList.remove('fa-eye-slash');
+                iconElement.classList.add('fa-eye');
+            }
+        }
+    </script>
 </body>
 </html>
