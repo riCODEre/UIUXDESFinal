@@ -17,10 +17,23 @@
             <div class="block sm:flex">
                 <div class="flex">
                 </div>
+                <div class="relative inline-block mr-3">
+                    <button class="text-center p-2 bg-blue-800 hover:bg-gray-400 text-gray-800 font-semibold rounded-lg" onclick="menuContent('Messages'), event">
+                        <i class="fa fa-envelope text-xl font-light text-white px-2"></i>
+                    </button>
+                    <div id="Messages" class="hidden sm:hidden text-center right-0 w-[200px] bg-white absolute mt-2 rounded-lg shadow-md">
+                        <ul class="py-4 font-bold">
+                            <li class="hover:bg-blue-100 p-2">You've got a message!</li>
+                            <li class="hover:bg-blue-100 p-2">You have an appointment by 2 hours</li>
+                            <li class="hover:bg-blue-100 p-2">Your pet is cleared for appointment</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="relative inline-block">
                     <button class="text-center p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold rounded-lg" onclick="menuContent('Menu'), event">
                         <i class="fa fa-bars text-xl font-light px-2"></i>
                     </button>
+                    
                     <div id="Menu" class="hidden sm:hidden text-center right-0 w-[200px] bg-white absolute mt-2 rounded-lg shadow-md">
                         <ul class="py-4">
                             <li class="hover:bg-blue-100 p-2"><a href="./ViewPetOwner.html">Pet Owners</a></li>
@@ -46,7 +59,7 @@
                     </form>
                 </div>
                 <div>
-                    <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">View Appointment</a>
+                    <a href="./ViewAppoint.html" class="bg-blue-800 text-white p-2 rounded-lg">View Appointment</a>
                     <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">View Pet</a>          
                 </div>
                 
