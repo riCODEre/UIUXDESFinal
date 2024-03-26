@@ -54,3 +54,14 @@ function PHRContent() {
         adminView.style.display = 'block'; // or any other manipulation
     });
 }
+function openPopup(popupId) {
+    document.getElementById(popupId).style.display = "block";
+}
+
+function closePopup(popupId) {
+    document.getElementById(popupId).style.display = "none";
+}
+
+function HideMe(hideme) {
+    document.getElementById(hideme).style.display = "none";
+}

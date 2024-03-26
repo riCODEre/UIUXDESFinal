@@ -7,38 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Mainpage</title>
     <script src="/js/indexJs.js"></script>
-    <style>
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px; 
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
-            max-width: 400px; 
-        }
-        .popup-content {
-            line-height: 1.5; 
-        }
-        .popup button {
-            margin-top: 10px; 
-        }
-    </style>
-    <script>
-        function openPopup(popupId) {
-            document.getElementById(popupId).style.display = "block";
-        }
-
-        function closePopup(popupId) {
-            document.getElementById(popupId).style.display = "none";
-        }
-    </script>
 </head>
 <body class="font-sans bg-slate-100">
     <header class="sticky top-0">
+        <div class="hidden fixed top-1/2 left-1/2 tran"></div>
         <nav class="flex justify-between items-center p-4 bg-white">
             <div>
                 <a href="./index.html" class="flex text-black font-bold text-3xl align-middle"><span class="text-blue-800 text-3xl font-bold">PARMS</span>Clinic</a>
@@ -119,24 +91,24 @@
                     </div>
                     <div class="flex flex-col place-self-center text-center space-y-3">
                         <button onclick="openPopup('servicesPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</button>
-                        <div id="servicesPopup" class="popup">
-                            <div class="popup-content">
-                                Service 1<br>
-                                Service 2<br>
-                                Service 3<br>
-                                Service 4<br>
+                        <div id="servicesPopup" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                            <div class="leading-6">
+                                <p>Service 1</p>
+                                <p>Service 2</p>
+                                <p>Service 3</p>
+                                <p>Service 4</p>  
                             </div>
-                            <button onclick="closePopup('servicesPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                            <button onclick="closePopup('servicesPopup')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
                         </div>
                         <button onclick="openPopup('appointmentPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</button>
-                        <div id="appointmentPopup" class="popup">
-                            <div class="popup-content">
-                                Appointed Pet A<br>
-                                Appointed Pet B<br>
-                                Appointed Pet C<br>
-                                Appointed Pet D<br>
+                        <div id="appointmentPopup" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                            <div class="leading-6">
+                                <p>Appointed Pet A</p>
+                                <p>Appointed Pet B</p>
+                                <p>Appointed Pet C</p>
+                                <p>Appointed Pet D</p>
                             </div>
-                            <button onclick="closePopup('appointmentPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                            <button onclick="closePopup('appointmentPopup')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
                         </div>
                     </div>
                 </div>
@@ -150,31 +122,31 @@
                     </div>
                     <div class="flex flex-col place-self-center text-center space-y-3">
                         <button onclick="openPopup('servicesPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</button>
-                        <div id="servicesPopup" class="popup">
-                            <div class="popup-content">
-                                Service 1<br>
-                                Service 2<br>
-                                Service 3<br>
-                                Service 4<br>
+                        <div id="servicesPopup" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                            <div class="leading-6">
+                                <p>Service 1</p>
+                                <p>Service 2</p>
+                                <p>Service 3</p>
+                                <p>Service 4</p>  
                             </div>
-                            <button onclick="closePopup('servicesPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                            <button onclick="closePopup('servicesPopup')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
                         </div>
                         <button onclick="openPopup('appointmentPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</button>
-                        <div id="appointmentPopup" class="popup">
-                            <div class="popup-content">
-                                Appointed Pet A<br>
-                                Appointed Pet B<br>
-                                Appointed Pet C<br>
-                                Appointed Pet D<br>
+                        <div id="appointmentPopup" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                            <div class="leading-6">
+                                <p>Appointed Pet A</p>
+                                <p>Appointed Pet B</p>
+                                <p>Appointed Pet C</p>
+                                <p>Appointed Pet D</p>
                             </div>
-                            <button onclick="closePopup('appointmentPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                            <button onclick="closePopup('appointmentPopup')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
                         </div>
                     </div>
                 </div>
                 
             </div>
             <div id="adminView" class="hidden mx-auto w-1/2">
-                <div class="flex justify-center bg-white rounded-lg my-6 p-6">
+                <div id="Customer1" class="flex justify-center bg-white rounded-lg my-6 p-6">
                     <div class="mr-6">
                         <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
                     </div>
@@ -183,12 +155,39 @@
                         <p class="text-lg">7pm-10pm</p>
                     </div>
                     <div class="flex flex-col place-self-center text-center space-y-3">
-                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
-                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
-                        <a href="#" class="border border-blue-800 p-2 rounded-lg">Cancel</a>
+                        <button onclick="openPopup('AdminSrvPopup1')" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</button>
+                        <div id="AdminSrvPopup1" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                            <div class="leading-6">
+                                <p>Service 1</p>
+                                <p>Service 2</p>
+                                <p>Service 3</p>
+                                <p>Service 4</p>  
+                            </div>
+                            <button onclick="closePopup('AdminSrvPopup1')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                        </div>
+                        <button onclick="openPopup('AdminAptmPopup1')" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</button>
+                        <div id="AdminAptmPopup1" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                            <div class="leading-6">
+                                <p>Appointed Pet A</p>
+                                <p>Appointed Pet B</p>
+                                <p>Appointed Pet C</p>
+                                <p>Appointed Pet D</p>
+                            </div>
+                            <button onclick="closePopup('AdminAptmPopup1')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                        </div>
+                        <button onclick="openPopup('ConfirmPopup')" class="border border-blue-800 p-2 rounded-lg">Cancel</button>
+                        <div id="ConfirmPopup" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                            <div class="leading-6">
+                                <p>Are you sure you want cancel this appointment?</p>
+                            </div>
+                            <button onclick="HideMe('Customer1'), closePopup('ConfirmPopup')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Confirm</button>
+                            <button onclick="closePopup('ConfirmPopup')" class="mt-[10px] bg-white border border-blue-500 text-blue-500 p-2 rounded-lg">Close</button>
+                            
+                        </div>
                     </div>
+                    
                 </div>
-                <div class="flex justify-center bg-white rounded-lg my-6 p-6">
+                <div id="Customer2" class="flex justify-center bg-white rounded-lg my-6 p-6">
                     <div class="mr-6">
                         <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
                     </div>
@@ -197,9 +196,35 @@
                         <p class="text-lg">7pm-10pm</p>
                     </div>
                     <div class="flex flex-col place-self-center text-center space-y-3">
-                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</a>
-                        <a href="#" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</a>
-                        <a href="#" class="border border-blue-800 p-2 rounded-lg">Cancel</a>
+                        <button onclick="openPopup('AdminSrvPopup2')" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</button>
+                        <div id="AdminSrvPopup2" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                            <div class="leading-6">
+                                <p>Service 1</p>
+                                <p>Service 2</p>
+                                <p>Service 3</p>
+                                <p>Service 4</p>  
+                            </div>
+                            <button onclick="closePopup('AdminSrvPopup2')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                        </div>
+                        <button onclick="openPopup('AdminAptmPopup2')" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</button>
+                        <div id="AdminAptmPopup2" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                            <div class="leading-6">
+                                <p>Appointed Pet A</p>
+                                <p>Appointed Pet B</p>
+                                <p>Appointed Pet C</p>
+                                <p>Appointed Pet D</p>
+                            </div>
+                            <button onclick="closePopup('AdminAptmPopup2')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                        </div>
+                        <button onclick="openPopup('ConfirmPopup2')" class="border border-blue-800 p-2 rounded-lg">Cancel</button>
+                        <div id="ConfirmPopup2" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                            <div class="leading-6">
+                                <p>Are you sure you want cancel this appointment?</p>
+                            </div>
+                            <button onclick="HideMe('Customer2'), closePopup('ConfirmPopup2')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Confirm</button>
+                            <button onclick="closePopup('ConfirmPopup2')" class="mt-[10px] bg-white border border-blue-500 text-blue-500 p-2 rounded-lg">Close</button>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
