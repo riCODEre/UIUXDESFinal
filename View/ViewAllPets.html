@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Add Appointments</title>
+    <title>Pet List</title>
     <script src="/js/indexJs.js"></script>
 </head>
 <body class="font-sans bg-slate-100">
@@ -15,6 +15,8 @@
                 <a href="./index.html" class="flex text-black font-bold text-3xl align-middle"><span class="text-blue-800 text-3xl font-bold">PARMS</span>Clinic</a>
             </div>
             <div class="block sm:flex">
+                <div class="flex">
+                </div>
                 <div class="relative inline-block mr-3">
                     <button class="text-center p-2 bg-blue-800 hover:bg-gray-400 text-gray-800 font-semibold rounded-lg" onclick="menuContent('Messages'), event">
                         <i class="fa fa-envelope text-xl font-light text-white px-2"></i>
@@ -27,15 +29,14 @@
                         </ul>
                     </div>
                 </div>
-                
                 <div class="relative inline-block">
                     <button class="text-center p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold rounded-lg" onclick="menuContent('Menu'), event">
                         <i class="fa fa-bars text-xl font-light px-2"></i>
                     </button>
+                    
                     <div id="Menu" class="hidden sm:hidden text-center right-0 w-[200px] bg-white absolute mt-2 rounded-lg shadow-md">
                         <ul class="py-4">
-                            <li class="hover:bg-blue-100 p-2"><a href="./ViewPetList.html">Pets</a></li>
-                            <li class="adminView hover:bg-blue-100 p-2 hidden"><a href="./ViewPetOwner.html">Pet Owners</a></li>
+                            <li class="hover:bg-blue-100 p-2"><a href="./ViewPetOwner.html">Pet Owners</a></li>
                             <li class="hover:bg-blue-100 p-2"><a href="./ViewAppoint.html">Appointments</a></li>
                             <li class="mt-3 hover:bg-blue-100 p-2">
                                 <a href="./index.html" class="rounded-lg bg-blue-800 hover:bg-blue-900 p-2 px-5  text-white self-center">Sign out</a>
@@ -46,71 +47,57 @@
             </div>
         </nav>
     </header>
-    <main> 
-        <div class="flex justify-center mt-7">
-            <div class="bg-amber-100 space-y-6 mr-6 rounded-lg my-6 p-6">
-                <div class="flex flex-col">
-                    <label for="">Reason For Visit</label>
-                    <textarea class="p-3" name="" id="" cols="30" rows="6"></textarea>
+    <main>
+        <div class="flex flex-col items-center mt-10"> 
+            <div class="flex justify-between place-items-center w-1/2 space-x-5">
+                <div>
+                    <form action="#" class="flex">
+                        <input class="flex hover:border-blue-500 bg-gray-50 p-1 my-1 border border-black rounded-md w-80" type="text" name="SearchBar" id="SearchBar" placeholder="Find Specific Pet">
+                        <button type="submit" class="ml-3 p-1 px-3 bg-blue-800 rounded-lg text-white border border-blue-800 hover:bg-slate-100 hover:text-blue-800">
+                            <i class="fa fa-search "></i>
+                        </button>
+                    </form>
                 </div>
-                <div class="">
-                    <label for="Veterinarian">Veterinarian: </label>
-                    <select name="" id="">
-                        <option value="Eric">Dr. Eric</option>
-                        <option value="Ryan">Dr. Ryan</option>
-                        <option value="AJ">Dr. AJ</option>
-                    </select>
+                <div>
+                    <a href="./ViewAppoint.html" class="bg-blue-800 text-white p-2 rounded-lg">View Appointment</a>
+                    <a href="./ViewPetOwner.html" class="bg-blue-800 text-white p-2 rounded-lg">View Pet Owners</a>          
                 </div>
                 
             </div>
-                
-            <div class="bg-white rounded-lg my-6 p-6">
-                <h2>April 2024</h2>
-                <div class="grid grid-cols-7">
-                    <p>Monday</p>
-                    <p>Tuesday</p>
-                    <p>Wednesday</p>
-                    <p>Thursday</p>
-                    <p>Friday</p>
-                    <p>Saturday</p>
-                    <p>Sunday</p>
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">7</a>
-                    <a href="#">8</a>
-                    <a href="#">9</a>
-                    <a href="#">10</a>
-                    <a href="#">11</a>
-                    <a href="#">12</a>
-                    <a href="#">13</a>
-                    <a href="#">14</a>
-                    <a href="#">15</a>
-                    <a href="#">16</a>
-                    <a href="#">17</a>
-                    <a href="#">18</a>
-                    <a href="#">19</a>
-                    <a href="#">20</a>
-                    <a href="#">21</a>
-                    <a href="#">22</a>
-                    <a href="#">23</a>
-                    <a href="#">24</a>
-                    <a href="#">25</a>
-                    <a href="#">26</a>
-                    <a href="#">27</a>
-                    <a href="#">28</a>
-                    <a href="#">29</a>
-                    <a href="#">30</a>
+            <div class="block mx-auto w-1/2">
+                <div class="flex justify-center bg-white rounded-lg my-6 p-6 shadow-md">
+                    <div class="mr-6">
+                        <img src="/img/viewallPet.jpg" alt="Doggo" class="w-[150px] rounded-full shadow-md">
+                    </div>
+                    <div class="place-self-center ">
+                        <h2 class="font-bold mb-5 text-xl">Doggo</h2>
+                        <a href="ViewPetList.html" class="bg-blue-800 text-white p-2 rounded-lg">View More</a>
+                    </div>
                 </div>
-                <div class="flex justify-end space-x-4 mt-7">
-                    <a href="./ViewAppoint.html" class="bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg">Book</a>
-                    <a href="./ViewAppoint.html" class="bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg">Cancel</a>
+                <div class="flex justify-center bg-white rounded-lg my-6 p-6 shadow-md">
+                    <div class="mr-6">
+                        <img src="/img/viewallPet.jpg" alt="Doggo" class="w-[150px] rounded-full shadow-md">
+                    </div>
+                    <div class="place-self-center ">
+                        <h2 class="font-bold mb-5 text-xl">Doggo</h2>
+                        <a href="ViewPetList.html" class="bg-blue-800 text-white p-2 rounded-lg">View More</a>
+                    </div>
                 </div>
-            </div>
+                <div class="flex justify-center bg-white rounded-lg my-6 p-6 shadow-md">
+                    <div class="mr-6">
+                        <img src="/img/viewallPet.jpg" alt="Doggo" class="w-[150px] rounded-full shadow-md">
+                    </div>
+                    <div class="place-self-center ">
+                        <h2 class="font-bold mb-5 text-xl">Doggo</h2>
+                        <a href="ViewPetList.html" class="bg-blue-800 text-white p-2 rounded-lg">View More</a>
+                    </div>
+                </div>
+            </div>    
+            
+            
         </div>
+    
+    
     </main>
     <footer class="mt-20">
         <div class="bg-black/75 text-white p-6">

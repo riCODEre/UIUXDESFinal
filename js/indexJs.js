@@ -42,6 +42,12 @@ function menuContent(contentId) {
 }
 
 function PHRContent() {
+
+    var initialContent = document.querySelectorAll('.initialContent');
+    initialContent.forEach(function(initialcontent){
+        initialcontent.style.display = 'none';
+    })
+    
     // Hide all content sections
     var contents = document.querySelectorAll('.adminView');
     contents.forEach(function(content) {

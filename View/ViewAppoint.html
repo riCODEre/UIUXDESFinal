@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Mainpage</title>
+    <title>Appointments</title>
     <script src="/js/indexJs.js"></script>
 </head>
 <body class="font-sans bg-slate-100">
@@ -17,8 +17,8 @@
             </div>
             <div class="block sm:flex">
                 <div class="flex">
-                    <a href="#" onclick="showContent('adminView'), event, PHRContent()" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">Admin View</a>
-                    <a href="./ViewAppoint.html" class="rounded-lg bg-blue-800 p-2 px-5 mr-3 text-white self-center">PO View</a>
+                    <a href="#" onclick="PHRContent()" class="rounded-lg bg-blue-800 hover:bg-blue-600 p-2 px-5 mr-3 text-white self-center">Admin View</a>
+                    <a href="./ViewAppoint.html" class="rounded-lg bg-blue-800 hover:bg-blue-600 p-2 px-5 mr-3 text-white self-center">PO View</a>
                 </div>
                 <div class="relative inline-block mr-3">
                     <button class="text-center p-2 bg-blue-800 hover:bg-gray-400 text-gray-800 font-semibold rounded-lg" onclick="menuContent('Messages'), event">
@@ -51,14 +51,22 @@
         </nav>
     </header>
     <main> 
+        
+        
         <div class="flex flex-col items-center mt-8">
+            
             <div class="flex justify-center text-center mb-8">
                 <h1 class="text-2xl font-bold">
                     My Appointment List
                 </h1>
             </div>
-            <div class="flex justify-between place-items-center w-1/2 space-x-5">
-                <div class="flex place-self-center">
+            <div class="flex justify-between place-items-center w-2/3 space-x-5">
+                <div class="flex">
+                    <div>
+                        <a href="./ViewPetList.html" class="border border-blue-800 hover:bg-blue-100 text-md text-blue-800 p-2 rounded-lg mr-3">
+                            Go Back
+                        </a>
+                    </div>
                     <p>Sort by:</p>
                     <select class="bg-slate-100 font-bold" name="Sort" id="Sort">
                         <option value="None">None</option>
@@ -69,10 +77,11 @@
                     </select>
                 </div>
                 <div class="flex">
-                    <a href="./AddAppointment.html" class="bg-blue-800 text-white p-2 rounded-lg mr-3">Add Appointment</a>
+                    
+                    <a href="./AddAppointment.html" class="initialContent bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg mr-3">Add Appointment</a>
                     <form action="" class="flex">
                         <input class="flex hover:border-blue-500 bg-gray-50 p-1 my-1 border border-black rounded-md w-60" type="text" name="SearchB" id="SearchB" placeholder="Search appointment">
-                        <button type="submit" class="ml-3 p-1 px-3 bg-blue-800 rounded-lg text-white border border-blue-800 hover:bg-slate-100 hover:text-blue-800">
+                        <button type="submit" class="ml-3 p-1 px-3 bg-blue-800 hover:bg-blue-600 rounded-lg text-white">
                             <i class="fa fa-search "></i>
                         </button>
                     </form>
@@ -80,7 +89,7 @@
                 </div>
                 
             </div>
-            <div id="initialContent" class="block mx-auto w-1/2">
+            <div class="initialContent block mx-auto w-2/3">
                 <div class="flex justify-center bg-white rounded-lg my-6 p-6">
                     <div class="mr-6">
                         <img src="/img/DocFace.png" alt="Random guy" class="w-[150px] rounded-full">
@@ -90,7 +99,7 @@
                         <p class="text-lg">7pm-10pm</p>
                     </div>
                     <div class="flex flex-col place-self-center text-center space-y-3">
-                        <button onclick="openPopup('servicesPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</button>
+                        <button onclick="openPopup('servicesPopup')" class="bg-blue-800 text-white p-2 rounded-lg hover:bg-blue-600">Services Availed</button>
                         <div id="servicesPopup" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                             <div class="leading-6">
                                 <p>Service 1</p>
@@ -98,9 +107,9 @@
                                 <p>Service 3</p>
                                 <p>Service 4</p>  
                             </div>
-                            <button onclick="closePopup('servicesPopup')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                            <button onclick="closePopup('servicesPopup')" class="mt-[10px] bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg">Close</button>
                         </div>
-                        <button onclick="openPopup('appointmentPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</button>
+                        <button onclick="openPopup('appointmentPopup')" class="bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg ">Appointed Pet</button>
                         <div id="appointmentPopup" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                             <div class="leading-6">
                                 <p>Appointed Pet A</p>
@@ -108,7 +117,7 @@
                                 <p>Appointed Pet C</p>
                                 <p>Appointed Pet D</p>
                             </div>
-                            <button onclick="closePopup('appointmentPopup')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                            <button onclick="closePopup('appointmentPopup')" class="mt-[10px] bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg">Close</button>
                         </div>
                     </div>
                 </div>
@@ -121,7 +130,7 @@
                         <p class="text-lg">7pm-10pm</p>
                     </div>
                     <div class="flex flex-col place-self-center text-center space-y-3">
-                        <button onclick="openPopup('servicesPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</button>
+                        <button onclick="openPopup('servicesPopup')" class="bg-blue-800 text-white p-2 rounded-lg hover:bg-blue-600">Services Availed</button>
                         <div id="servicesPopup" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                             <div class="leading-6">
                                 <p>Service 1</p>
@@ -129,9 +138,9 @@
                                 <p>Service 3</p>
                                 <p>Service 4</p>  
                             </div>
-                            <button onclick="closePopup('servicesPopup')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                            <button onclick="closePopup('servicesPopup')" class="mt-[10px] bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg">Close</button>
                         </div>
-                        <button onclick="openPopup('appointmentPopup')" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</button>
+                        <button onclick="openPopup('appointmentPopup')" class="bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg ">Appointed Pet</button>
                         <div id="appointmentPopup" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                             <div class="leading-6">
                                 <p>Appointed Pet A</p>
@@ -145,7 +154,7 @@
                 </div>
                 
             </div>
-            <div id="adminView" class="hidden mx-auto w-1/2">
+            <div class="adminView hidden mx-auto w-1/2">
                 <div id="Customer1" class="flex justify-center bg-white rounded-lg my-6 p-6">
                     <div class="mr-6">
                         <img src="/img/rando.jpg" alt="Random guy" class="w-[150px] rounded-full">
@@ -155,7 +164,7 @@
                         <p class="text-lg">7pm-10pm</p>
                     </div>
                     <div class="flex flex-col place-self-center text-center space-y-3">
-                        <button onclick="openPopup('AdminSrvPopup1')" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</button>
+                        <button onclick="openPopup('AdminSrvPopup1')" class="bg-blue-800 text-white p-2 rounded-lg hover:bg-blue-600">Services Availed</button>
                         <div id="AdminSrvPopup1" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                             <div class="leading-6">
                                 <p>Service 1</p>
@@ -163,9 +172,9 @@
                                 <p>Service 3</p>
                                 <p>Service 4</p>  
                             </div>
-                            <button onclick="closePopup('AdminSrvPopup1')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                            <button onclick="closePopup('AdminSrvPopup1')" class="mt-[10px] bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg">Close</button>
                         </div>
-                        <button onclick="openPopup('AdminAptmPopup1')" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</button>
+                        <button onclick="openPopup('AdminAptmPopup1')" class="bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg ">Appointed Pet</button>
                         <div id="AdminAptmPopup1" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                             <div class="leading-6">
                                 <p>Appointed Pet A</p>
@@ -173,9 +182,9 @@
                                 <p>Appointed Pet C</p>
                                 <p>Appointed Pet D</p>
                             </div>
-                            <button onclick="closePopup('AdminAptmPopup1')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
+                            <button onclick="closePopup('AdminAptmPopup1')" class="mt-[10px] bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg">Close</button>
                         </div>
-                        <button onclick="openPopup('ConfirmPopup')" class="border border-blue-800 p-2 rounded-lg">Cancel</button>
+                        <button onclick="openPopup('ConfirmPopup')" class="border border-blue-800 hover:bg-blue-100 p-2 rounded-lg">Cancel</button>
                         <div id="ConfirmPopup" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                             <div class="leading-6">
                                 <p>Are you sure you want cancel this appointment?</p>
@@ -196,7 +205,7 @@
                         <p class="text-lg">7pm-10pm</p>
                     </div>
                     <div class="flex flex-col place-self-center text-center space-y-3">
-                        <button onclick="openPopup('AdminSrvPopup2')" class="bg-blue-800 text-white p-2 rounded-lg">Services Availed</button>
+                        <button onclick="openPopup('AdminSrvPopup2')" class="bg-blue-800 text-white p-2 rounded-lg hover:bg-blue-600">Services Availed</button>
                         <div id="AdminSrvPopup2" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                             <div class="leading-6">
                                 <p>Service 1</p>
@@ -206,7 +215,7 @@
                             </div>
                             <button onclick="closePopup('AdminSrvPopup2')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
                         </div>
-                        <button onclick="openPopup('AdminAptmPopup2')" class="bg-blue-800 text-white p-2 rounded-lg">Appointed Pet</button>
+                        <button onclick="openPopup('AdminAptmPopup2')" class="bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg ">Appointed Pet</button>
                         <div id="AdminAptmPopup2" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                             <div class="leading-6">
                                 <p>Appointed Pet A</p>
@@ -216,7 +225,7 @@
                             </div>
                             <button onclick="closePopup('AdminAptmPopup2')" class="mt-[10px] bg-blue-800 text-white p-2 rounded-lg">Close</button>
                         </div>
-                        <button onclick="openPopup('ConfirmPopup2')" class="border border-blue-800 p-2 rounded-lg">Cancel</button>
+                        <button onclick="openPopup('ConfirmPopup2')" class="border border-blue-800 hover:bg-blue-100 p-2 rounded-lg">Cancel</button>
                         <div id="ConfirmPopup2" class="border border-black/10 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                             <div class="leading-6">
                                 <p>Are you sure you want cancel this appointment?</p>
