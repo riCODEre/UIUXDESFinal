@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Add Appointments</title>
     <script src="/js/indexJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body class="font-sans bg-slate-100">
     <header class="sticky top-0">
@@ -47,11 +49,40 @@
         </nav>
     </header>
     <main> 
-        <div class="flex justify-center mt-7">
-            <div class="bg-amber-100 space-y-6 mr-6 rounded-lg my-6 p-6">
+        <div class="sm:flex justify-center mt-7">
+            <div class="bg-amber-100 space-y-6 mr-6 rounded-lg my-6 p-6 text-xl">
                 <div class="flex flex-col">
                     <label for="">Reason For Visit</label>
                     <textarea class="p-3" name="" id="" cols="30" rows="6"></textarea>
+                </div>
+                <div>
+                    <p>Pet In Concern:</p>
+                    <select name="time" id="time" class="text-lg">
+                        <option value="Lucky">Lucky</option>
+                        <option value="Ferros">Ferros</option>
+                        <option value="Milky">Milky</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Select Date:</p>
+                    <input
+                        id = "birthdate"
+                        type="text"
+                        placeholder="mm/dd/yy"
+                        class="text-box p-2 px-1 py-1 rounded-lg w-full h-full"
+                    />
+                </div>
+                <div>
+                    <p>Select Time Slot:</p>
+                    <select name="time" id="time" class="text-lg">
+                        <option value="8">8:00AM-9:00AM</option>
+                        <option value="9">9:00AM-10:00AM</option>
+                        <option value="10">10:00AM-11:00AM</option>
+                        <option value="11">11:00AM-12:00NN</option>
+                        <option value="13">1:00PM-2:00PM</option>
+                        <option value="14">2:00PM-3:00PM</option>
+                        <option value="15">3:00PM-4:00PM</option>
+                    </select>
                 </div>
                 <div class="">
                     <label for="Veterinarian">Veterinarian: </label>
@@ -64,46 +95,46 @@
                 
             </div>
                 
-            <div class="bg-white rounded-lg my-6 p-6">
-                <h2>April 2024</h2>
-                <div class="grid grid-cols-7">
-                    <p>Monday</p>
-                    <p>Tuesday</p>
-                    <p>Wednesday</p>
-                    <p>Thursday</p>
-                    <p>Friday</p>
-                    <p>Saturday</p>
-                    <p>Sunday</p>
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">7</a>
-                    <a href="#">8</a>
-                    <a href="#">9</a>
-                    <a href="#">10</a>
-                    <a href="#">11</a>
-                    <a href="#">12</a>
-                    <a href="#">13</a>
-                    <a href="#">14</a>
-                    <a href="#">15</a>
-                    <a href="#">16</a>
-                    <a href="#">17</a>
-                    <a href="#">18</a>
-                    <a href="#">19</a>
-                    <a href="#">20</a>
-                    <a href="#">21</a>
-                    <a href="#">22</a>
-                    <a href="#">23</a>
-                    <a href="#">24</a>
-                    <a href="#">25</a>
-                    <a href="#">26</a>
-                    <a href="#">27</a>
-                    <a href="#">28</a>
-                    <a href="#">29</a>
-                    <a href="#">30</a>
+            <div class="bg-white rounded-lg my-6 p-6 text-center">
+                <h2 class="flex justify-center mb-7 font-extrabold text-2xl">April 2024</h2>
+                <div class="grid grid-cols-7 text-lg gap-1">
+                    <p class="font-semibold">Monday</p>
+                    <p class="font-semibold">Tuesday</p>
+                    <p class="font-semibold">Wednesday</p>
+                    <p class="font-semibold">Thursday</p>
+                    <p class="font-semibold">Friday</p>
+                    <p class="font-semibold">Saturday</p>
+                    <p class="font-semibold">Sunday</p>
+                    <a href="#" class="hover:bg-blue-500 p-5 rounded-md hover:text-white">1</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">2</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">3</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">4</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">5</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">6</a>
+                    <a href="#" class="hover:bg-blue-500 p-5 rounded-md hover:text-white">7</a>
+                    <a href="#" class="hover:bg-blue-500 p-5 rounded-md hover:text-white">8</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">9</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">10</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">11</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">12</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">13</a>
+                    <a href="#" class="hover:bg-blue-500 p-5 rounded-md hover:text-white">14</a>
+                    <a href="#" class="hover:bg-blue-500 p-5 rounded-md hover:text-white">15</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">16</a>
+                    <a href="#" class="bg-red-500 p-5 rounded-md text-white">17</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">18</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">19</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">20</a>
+                    <a href="#" class="hover:bg-blue-500 p-5 rounded-md hover:text-white">21</a>
+                    <a href="#" class="hover:bg-blue-500 p-5 rounded-md hover:text-white">22</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">23</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">24</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">25</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">26</a>
+                    <a href="#" class="bg-red-500 p-5 rounded-md text-white">27</a>
+                    <a href="#" class="hover:bg-blue-500 p-5 rounded-md hover:text-white">28</a>
+                    <a href="#" class="hover:bg-blue-500 p-5 rounded-md hover:text-white">29</a>
+                    <a href="#" class="bg-blue-500 p-5 rounded-md text-white">30</a>
                 </div>
                 <div class="flex justify-end space-x-4 mt-7">
                     <a href="./ViewAppoint.html" class="bg-blue-800 hover:bg-blue-600 text-white p-2 rounded-lg">Book</a>
@@ -121,6 +152,16 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        const lastDayOfMonth = new Date();
+        lastDayOfMonth.setMonth(lastDayOfMonth.getMonth() + 1);
+        lastDayOfMonth.setDate(0);
+        flatpickr('#birthdate', {
+          dateFormat: 'm/d/Y',
+          minDate: 'today',
+          disable: ['4/17/2024', '4/27/2024'],
+          maxDate: lastDayOfMonth
+        });
+    </script>
 </body>
 </html>

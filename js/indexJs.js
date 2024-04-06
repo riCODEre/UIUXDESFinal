@@ -71,3 +71,7 @@ function closePopup(popupId) {
 function HideMe(hideme) {
     document.getElementById(hideme).style.display = "none";
 }
+
+function goBack() {
+    window.history.back();
+  }
